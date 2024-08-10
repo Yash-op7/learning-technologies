@@ -4,7 +4,7 @@ export const Todo = ({todo, toggleTodo}) => {
   return (
     <div key={todo.id}>
         <label>
-            <input type="checkbox" checked={todo.done} />
+            <input type="checkbox" checked={todo.done} onClick={()=>toggleTodo(todo.id)}/>
         </label>
         Task {todo.id}
     <ul>
