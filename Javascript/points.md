@@ -47,7 +47,19 @@
 3. Id selector: `#id_name {}`
 4. Class selector: `.class-name{}`
 - Note: id is only assigned to one element otherwise use classes
-5. text-align; left/right/center, align wrt to the parent (also start and end which differs based on languages like for hindi start would mean left but for urdu start would mean right)
+5. text-align; left/right/center, **align text wrt to the parent** (also start and end which differs based on languages like for hindi start would mean left but for urdu start would mean right)
+6. text-decoration: underline/overline/line-through/none, example:
+    1. `text-decoration: blue underline`
+    2. `text-decoration: blue wavy underline`
+7. font-weight: normal/bold/bolder/lighter or 100-900
+8. font-family: 'font-family-one font-family-two font-family-three ...'
+9. font-size: 24px;
+10. line-height: 5px; // lines can overlap if line heifht is small
+11. text-transform: uppercase/lowercase/capitalize/none
+
+# Units in CSS:
+pixels, px; 1 inch = 2.54 cm = 96px
 
 # Shortcuts
 - in vsc do, .class_name or #id_name for a div with taht class or id
+- css website/documentation: search mdn flexbox
