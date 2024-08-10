@@ -42,3 +42,12 @@
 - background-color: set the color of background elements
 
 # Selectors
+1. Universal selector: `*{}`
+2. Element selector: `element_name {}`
+3. Id selector: `#id_name {}`
+4. Class selector: `.class-name{}`
+- Note: id is only assigned to one element otherwise use classes
+5. text-align; left/right/center, align wrt to the parent (also start and end which differs based on languages like for hindi start would mean left but for urdu start would mean right)
+
+# Shortcuts
+- in vsc do, .class_name or #id_name for a div with taht class or id
