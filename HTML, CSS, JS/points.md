@@ -47,7 +47,7 @@
 3. Id selector: `#id_name {}`
 4. Class selector: `.class-name{}`
 - Note: id is only assigned to one element otherwise use classes
-5. text-align; left/right/center, **align text wrt to the parent** (also start and end which differs based on languages like for hindi start would mean left but for urdu start would mean right)
+5. text-align; left/right/center, **align text wrt to the box** (also start and end which differs based on languages like for hindi start would mean left but for urdu start would mean right)
 6. text-decoration: underline/overline/line-through/none, example:
     1. `text-decoration: blue underline`
     2. `text-decoration: blue wavy underline`
@@ -56,6 +56,8 @@
 9. font-size: 24px;
 10. line-height: 5px; // lines can overlap if line heifht is small
 11. text-transform: uppercase/lowercase/capitalize/none
+# -- Level 2 -- 
+# Box Model
 
 # Units in CSS:
 pixels, px; 1 inch = 2.54 cm = 96px

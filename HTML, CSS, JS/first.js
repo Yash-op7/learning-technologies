@@ -1,6 +1,7 @@
 const p1 = new Promise((res, rej) => {
-    setTimeout(1000)
-    res('resolved 1')})
+    // setTimeout(1000)
+    res('resolved 1')
+})
 const p2 = new Promise((res, rej) => {res('resolved 2')})
 const p3 = new Promise((res, rej) => {res('resolved 3')})
 
