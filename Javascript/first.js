@@ -6,3 +6,5 @@ const p3 = new Promise((res, rej) => {res('resolved 3')})
 
 Promise.race([p1, p2, p3]).then((messages) => {console.log(messages)})
 Promise.all([p1, p2, p3]).then((messages) => {console.log(messages)})
+
+console.log('test')
