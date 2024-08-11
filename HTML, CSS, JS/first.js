@@ -1,11 +1,30 @@
-// problem statemet: given a bunch of scores, and your scores, output your rank after each score
+function binarySearch(x, arr) {
+    let l = 0, r = arr.length-1;
+    let rank = r+1;
+    while(l <= r) {
+        let mid = (l+r)/2;
+        if(x >= arr[mid]) {
+            rank = mid+1;
+            r = mid - 1;
+        } else {
+            l = mid + 1;
+        }
+    }
+    return rank;
+} 
+
 function solve(n, scores, x, trials) {
-    let uniqueScores = []
-    uniqueScores = scores.filter((value) => {
-        return uniqueScores.find(value);
-    })
-    console.log(scores);
-    console.log(uniqueScores);
+    const uniqueArray = [...new Set(scores)];
+    uniqueArray.sort((a , b) => b-a);
+    console.log(uniqueArray, trials);
+    result = "";
+    let max_score = -1;
+    for(let ele of trials) {
+        max_score = Math.max(max_score, ele)
+        result += binarySearch(max_score, uniqueArray);
+        result += ' ';
+    }
+    console.log(result);
 }
 
 const readline = require('readline');
@@ -25,23 +44,12 @@ rl.on('close', () => {
     let test_count = parseInt(input[index++]);
 
     while (test_count--) {
-        // Reading n
         let n = parseInt(input[index++]);
-
-        // Reading scores array
         let scores = input[index++].split(' ').map(Number);
-
-        // Reading x
         let x = parseInt(input[index++]);
-
-        // Reading trials array
         let trials = input[index++].split(' ').map(Number);
-
         solve(n, scores, x, trials);
     }
 });
 
-function solve(n, scores, x, trials) {
-    // Your logic to solve the problem goes here
-    console.log(`n: ${n}, scores: ${scores}, x: ${x}, trials: ${trials}`);
-}
+
