@@ -5,14 +5,28 @@
     - **stateless**, all client requests are independent
 - Request Methods:
     - `GET`
-GET: Retrieve data from the server.
-POST: Send data to the server, typically used for form submissions.
-PUT: Update or create a resource.
-DELETE: Remove a resource.
-HEAD, OPTIONS, PATCH: Oth
+    - `POST`
+    - `PUT`
+    - `DELETE`
+    - `HEAD`, `OPTIONS`, `PATCH` - for other specific purposes
+- Status codes: indicate result of a request:
+    - 200 - OK
+    - 301 - Moved permanently
+    - 404 - Not found
+    - 500 - Internal server error
+- Headers: HTTP headers provide metadata about the request or response. Examples include `Content-Type`, `Authorization`, and `Cache-Control`.
 - used over TCP, if we want to do HTTP requests for data then we need to first identify a server which is done using TCP after the 3 way handshake
-- HTTP 1.0 - Non Persistent
+- **HTTP/1.0** - Non Persistent
     - Once it receives the requested data it severs the connection with the server
-- HTTP 1.1 - Perisistent
+- **HTTP/1.1** - Perisistent
     - It keeps the connection till a timeout runs out
-    - used more nowadays
+    - most used version
+    - Allows a client to send multiple requests without waiting for the corresponding responses on the same connection, reducing latency.
+- **HTTP/2** - addresses performance issues of HTTP/1.1
+    - uses binary protocol instead of text protocol which can be parsed more efficiently
+    - Multiplexing: Allows multiple requests and responses to be sent concurrently over a single connection
+    - Header Compression: Reduces overhead by compressing headers.
+    - Server Push: Allows the server to send resources to the client that it expects the client will need, without the client explicitly requesting them.
+- **HTTP/3** - more efficient, based on QUIC protocol by google, still in adoption phase:
+    - QUIC (Quick UDP Internet Connections, pronounced quick) is an experimental transport layer network protocol designed by Google which is built on top of UDP, to reduce latency and improve connection reliability.
+    - offers better performance.
