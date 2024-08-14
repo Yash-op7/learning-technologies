@@ -1,12 +1,19 @@
-let element = document.getElementById("test");
+let resolveBtn = document.getElementById("resolve-btn");
+let rejectBtn = document.getElementById("reject-btn");
 
-const rand = (x) => Math.floor(Math.random() * (x + 1));
+// challenge: resolve a promise when a button is clicked;
 
-function getColor(number) {
-    return `rgb(${rand(number)}, ${rand(number)}, ${rand(number)})`
-}
 
-element.addEventListener("click", () => {
-    const randomColor = getColor(255);
-    document.body.style.backgroundColor = randomColor;
-});
+
+let p = new Promise((res, rej) => {
+    resolveBtn.addEventListener("click", () => {
+        res(`Resolved Promise`);
+    })
+    rejectBtn.addEventListener("click", () => {
+        rej(`Rejected Promise`);
+    })
+    
+})
+
+
+p.then((str) => console.log(str)).catch((str) => console.log(str));
