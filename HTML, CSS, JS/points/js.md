@@ -1,6 +1,10 @@
 # What is JS?
 JS is a lightweight, cross-platform, single-threaded, and interpreted compiled programming language. It is also known as the scripting language for webpages.JavaScript is a weakly typed language (dynamically typed). JavaScript can be used for Client-side developments as well as Server-side developments. JavaScript is both an imperative and declarative type of language. 
 
+# Advanced Concepts theory
+## 1. Closures
+
+
 ### map method takes 3 params by default: value, index, array
 ```
 const f = (val, index, arr) => {
