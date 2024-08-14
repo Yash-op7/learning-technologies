@@ -3,7 +3,7 @@ JS is a lightweight, cross-platform, single-threaded, and interpreted compiled p
 
 # Advanced Concepts theory
 ## 1. Closures
-
+A closure is the combination of a function bundled together with references to its surrounding state (the lexical env), in other words a closure gives you access to an outer function's scope from a n inner function 
 
 ### map method takes 3 params by default: value, index, array
 ```
