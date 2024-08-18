@@ -56,4 +56,10 @@ output "public_ip" {
 
 ```
  
-
+# Steps:
+1. `aws configure`
+2. `terraform init`
+3. `terraform fmt`  // format the code
+4. `terraform validate` // makes sure the code is valid, looks at the resource block, required information, etc
+5. `terraform plan`
+6. `terraform apply`
