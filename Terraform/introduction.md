@@ -26,3 +26,34 @@
 5. Destroy infra:
     - `terraform destroy`
     - Destroys the infra managed by your Terraform config, its useful for tearing down environments after testing.
+
+# Example: Provisioning an EC2 Instance with Terraform
+Here’s a basic example to get you started. This Terraform configuration will create an EC2 instance in AWS.
+```
+# Define the provider
+provider "aws" {
+  region = "us-west-2"
+}
+
+# Define the resource: an EC2 instance
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI ID
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "example-instance"
+  }
+}
+
+# Outputs: Instance ID and Public IP
+output "instance_id" {
+  value = aws_instance.example.id
+}
+
+output "public_ip" {
+  value = aws_instance.example.public_ip
+}
+
+```
+ 
+
