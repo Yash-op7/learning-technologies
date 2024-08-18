@@ -1,0 +1,3 @@
+- Terraform is an Infrastructure as code tool.
+- Enables you to define, provision and manage infra resources such as servers, databases and networking components using a configuration language called HCL
+- It can help automate and manage infra deployments, making it easier to maintain consistency, reduce manual errors.
