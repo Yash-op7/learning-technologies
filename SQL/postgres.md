@@ -33,3 +33,6 @@ FROM viewership;
 ```
 
 ![example of filter](image-1.png)
+
+# COALESCE()
+count(coalesce(q.query_id, 0))
